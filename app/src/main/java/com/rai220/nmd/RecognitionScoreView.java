@@ -61,7 +61,7 @@ public class RecognitionScoreView extends View implements ResultsView {
   public void setResults(final List<Classifier.Recognition> results) {
     if (results != null) {
       for (Classifier.Recognition rec : results) {
-        if (rec.getConfidence() > 0.90) {
+        if (rec.getConfidence() > 0.95) {
           String text = null;
           if (rec.getTitle().equals("rub50")) {
             text = "Пятьдесят рублей";
