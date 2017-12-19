@@ -203,6 +203,7 @@ public abstract class CameraActivity extends Activity implements OnImageAvailabl
 
   public void onSetDebug(final boolean debug) {}
 
+  /*
   @Override
   public boolean onKeyDown(final int keyCode, final KeyEvent event) {
     if (keyCode == KeyEvent.KEYCODE_VOLUME_DOWN || keyCode == KeyEvent.KEYCODE_VOLUME_UP) {
@@ -212,7 +213,7 @@ public abstract class CameraActivity extends Activity implements OnImageAvailabl
       return true;
     }
     return super.onKeyDown(keyCode, event);
-  }
+  } */
 
   protected abstract void onPreviewSizeChosen(final Size size, final int rotation);
   protected abstract int getLayoutId();

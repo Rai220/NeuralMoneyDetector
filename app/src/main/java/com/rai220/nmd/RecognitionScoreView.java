@@ -80,12 +80,13 @@ public class RecognitionScoreView extends View implements ResultsView {
       }
     }
 
-    this.results = results;
+    //this.results = results;
     postInvalidate();
   }
 
   @Override
   public void onDraw(final Canvas canvas) {
+    /*
     final int x = 10;
     int y = (int) (fgPaint.getTextSize() * 1.5f);
 
@@ -96,6 +97,6 @@ public class RecognitionScoreView extends View implements ResultsView {
         canvas.drawText(recog.getTitle() + ": " + recog.getConfidence(), x, y, fgPaint);
         y += fgPaint.getTextSize() * 1.5f;
       }
-    }
+    } */
   }
 }

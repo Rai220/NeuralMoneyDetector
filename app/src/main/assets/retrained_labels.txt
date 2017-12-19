@@ -4,6 +4,5 @@ roses
 rub100
 rub1000
 rub50
-rub500
 sunflowers
 tulips
