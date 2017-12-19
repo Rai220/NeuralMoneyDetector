@@ -71,6 +71,8 @@ public class RecognitionScoreView extends View implements ResultsView {
             text = "Пятьсот рублей";
           } else if (rec.getTitle().equals("rub1000")) {
             text = "Тысяча рублей";
+          } else if (rec.getTitle().equals("rub5000")) {
+            text = "Пять тысяч рублей";
           }
           if (System.currentTimeMillis() - lastSpeak > 3000 && text != null) {
             lastSpeak = System.currentTimeMillis();
