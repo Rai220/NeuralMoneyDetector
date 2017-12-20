@@ -63,6 +63,7 @@ public class RecognitionScoreView extends View implements ResultsView {
       for (Classifier.Recognition rec : results) {
         if (rec.getConfidence() > 0.95) {
           String text = null;
+
           if (rec.getTitle().equals("rub50")) {
             text = "Пятьдесят рублей";
           } else if (rec.getTitle().equals("rub100")) {
@@ -76,19 +77,20 @@ public class RecognitionScoreView extends View implements ResultsView {
           }
           if (System.currentTimeMillis() - lastSpeak > 3000 && text != null) {
             lastSpeak = System.currentTimeMillis();
+            text += " " + String.format("%.1f", rec.getConfidence());
             tts.speak(text, TextToSpeech.QUEUE_ADD, null);
           }
         }
       }
     }
 
-    //this.results = results;
+    this.results = results;
     postInvalidate();
   }
 
   @Override
   public void onDraw(final Canvas canvas) {
-    /*
+
     final int x = 10;
     int y = (int) (fgPaint.getTextSize() * 1.5f);
 
@@ -99,6 +101,6 @@ public class RecognitionScoreView extends View implements ResultsView {
         canvas.drawText(recog.getTitle() + ": " + recog.getConfidence(), x, y, fgPaint);
         y += fgPaint.getTextSize() * 1.5f;
       }
-    } */
+    }
   }
 }
